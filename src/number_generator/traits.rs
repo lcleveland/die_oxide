@@ -1,1 +1,3 @@
-pub mod number_generator;
+pub trait NumberGenerator {
+    fn generate(&self) -> i32;
+}
