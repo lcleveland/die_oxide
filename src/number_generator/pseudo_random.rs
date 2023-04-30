@@ -1,8 +1,16 @@
 use crate::number_generator::traits;
 use rand::Rng;
+use serde::{Deserialize, Serialize};
 
-struct PseudoRandom {
-    upper_limit: i32,
+#[derive(Clone, Copy, Debug, Deserialize, PartialEq, Serialize)]
+pub struct PseudoRandom {
+    pub upper_limit: i32,
+}
+
+impl Default for PseudoRandom {
+    fn default() -> Self {
+        Self { upper_limit: 20 }
+    }
 }
 
 impl traits::NumberGenerator for PseudoRandom {
