@@ -7,6 +7,6 @@ struct PseudoRandom {
 
 impl traits::NumberGenerator for PseudoRandom {
     fn generate(&self) -> i32 {
-        rand::thread_rng().gen_range(1..self.upper_limit)
+        rand::thread_rng().gen_range(1..=self.upper_limit)
     }
 }
