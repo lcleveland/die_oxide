@@ -7,6 +7,12 @@ pub struct PseudoRandom {
     pub upper_limit: i32,
 }
 
+impl PseudoRandom {
+    pub fn new(upper_limit: i32) -> Self {
+        Self { upper_limit }
+    }
+}
+
 impl Default for PseudoRandom {
     fn default() -> Self {
         Self { upper_limit: 20 }
