@@ -1,2 +1,3 @@
-pub mod number_generator;
+#![warn(missing_docs)]
 
+pub mod number_generator;
