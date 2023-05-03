@@ -1,3 +1,5 @@
+//! Pseudo-random number generator.
+
 use crate::number_generator::traits;
 use rand::Rng;
 use serde::{Deserialize, Serialize};
